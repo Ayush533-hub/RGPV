@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RGPV Results</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <img src="RGPVlogo.png" alt="RGPV Logo" />
+      <h1>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal</h1>
+      <h2>Results</h2>
+      <a href="http://www.rgpv.ac.in" target="_blank">RGPV Portal</a>
+    </header>
+
+    <main> <!-- body of the website start from here  -->
+      <div class="box">
+        <a class="back-link" href="index.html" target="_self">Back</a>
+      </div>
+      <h3>Result - B.E. / B.E. (PTDC)/ B.Tech. /B.Design.</h3>
+
+      <div class="result-form">
+        <div class="items">
+
+          <div class="form-group">
+            <label for="enroll">Enrollment No.</label>
+            <input type="text" id="enroll" required />
+          </div>
+
+          <div class="form-group">
+            <label for="sem">Semester</label>
+            <select id="sem">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+
+              <!-- Add more as needed -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Grading</label>
+            <input type="radio" name="grading" checked /> Grading
+            <input type="radio" name="grading" /> Non-Grading
+          </div>
+        </div>
+
+        <div class="captcha">
+          <div class="captcha-text">YRCRL</div>
+
+        </div>
+        <div class="input">
+          <input type="text" placeholder="" required style="height: 32px;" />
+        </div>
+        <div class="submitbotton">
+          <button type="submit" onclick="window.location.href='reel.html' ">View Result</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>This portal is managed by Centre for Research and Industrial Staff Performance ( CRISP ), Bhopal. Best viewed
+        in
+        IE 6.0 and above with monitor resolution 1024x768.</p>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+/* Base styles provided in the original code */
+/* (Your existing styles remain unchanged) */
+body {
+  font-family: verdana, arial, sans-serif;
+  /* margin-left: 322px;
+  margin-right: 322px;
+  margin-bottom: 0; */
+  width: 950px;
+  margin: 0 auto;
+  border: 8px solid white;
+  background: #ecf0f1;
+  color: #333;
+  font-weight: bolder;
+  border-block-end: unset;
+  line-height: 1.166;
+}
+
+header {
+  background-color: skyblue;
+  height: auto;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  border-bottom: #d9281e 4px solid;
+  border-top: #7aa4cd 8px solid;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  /* align-content: center; */
+  /* text-align: center; */
+  border: 2px solid black;
+  padding-top: inherit;
+  background-color: #dedede;
+  /* border-radius: 7px; */
+  padding: 8px;
+}
+
+header img {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 80px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(17, 76, 136);
+}
+
+header h2 {
+  color: rgb(237, 28, 36);
+  margin: 0.5rem 0;
+}
+
+header a {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: blue;
+  text-decoration: none;
+}
+
+.container {
+  /* display: flex;
+  justify-content: center;
+  align-content: center; */
+  /* flex: 1; */
+  overflow: hidden;
+  background-color: white;
+}
+
+main>h3 {
+  background-color: #CAE8EA;
+  border: thin solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 6px;
+  margin-top: 0px;
+}
+
+main {
+  /* flex: 1; */
+  /* Pushes footer down */
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 32vh;
+}
+
+.box {
+  position: relative; /* Required for absolute child positioning */
+  height: 1.5em; /* Example height */
+  /* border: 1px solid black; */
+}
+
+.back-link {
+  position: absolute;
+  bottom: 0px; /* Distance from bottom */
+  right: 0px; /* Distance from left */
+  text-decoration: none;
+  color: black;
+}
+
+.result-form {
+  /* display: inline-block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* text-align: left; */
+  background: white;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  margin-top: 1rem;
+}
+
+.input {
+  width: 100%;
+  height: 43px;
+  border: 2px solid black;
+  padding: 8px;
+  padding-top: 11px;
+  background-color: #dedede;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  margin-left: 12px;
+}
+
+.form-group1 {
+  margin-left: 12px;
+  /* display: flex; flex-direction: column; gap: 10px; */
+}
+
+.captcha {
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.captcha-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem;
+  background: #eee;
+  padding: 0.5rem 1rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #3f678e;
+}
+
+.submitbotton {
+  border: 1px solid #666666;
+  width: 100%;
+  background-color: #dedede;
+  padding: 8px;
+  vertical-align: inherit;
+}
+
+/* footer>p{
+  margin-bottom: 0vh;
+ } */
+/* #666666 */
+
+/* Responsive styles for other devices */
+@media only screen and (max-width: 1200px) {
+  body {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  .items {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .captcha {
+    gap: 0.5rem;
+  }
+
+  .captcha-text {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  header img {
+    height: 60px;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  header h2 {
+    font-size: 0.9rem;
+  }
+
+  .items {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .input {
+    height: 40px;
+    padding: 8px;
+  }
+
+  .captcha-text {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header img {
+    height: 50px;
+  }
+
+  header h1,
+  header h2 {
+    font-size: 0.8rem;
+  }
+
+  .items {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .result-form {
+    padding: 0.5rem;
+  }
+
+  .captcha-text {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>RGPV Results</title>
+  <!-- <link rel="stylesheet" href="style11.css"> -->
+  <style>
+    input[type="radio"] {
+      accent-color: blue;
+    }
+  </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ecf0f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      background-color: #aed6f1;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .logo {
+      background-image: url("RGPVlogo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 80px;
+      width: 80px;
+      margin: 0 auto 10px auto;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    /* border: medium solid black;
+    text-align: center;
+    color: black;
+    display: block;
+    unicode-bidi: isolate;
+    padding-inline: 2px;
+    .section {
+      margin: 20px 0;
+    
+    }
+*/
+    .section h3 {
+      text-align: center;
+      margin-bottom: 0px;
+      color: #993366;
+
+    }
+
+    fieldset {
+      border: 1px solid #999;
+      padding: 10px 20px 20px;
+      margin: 20px auto;
+      /* max-width: 800px; */
+    }
+
+    legend {
+      font-weight: 700;
+      display: block;
+      unicode-bidi: isolate;
+      padding-inline: 2px;
+    }
+
+
+    .section {
+      text-align: center;
+      color: black;
+      display: block;
+      unicode-bidi: isolate;
+      padding-inline: 2px;
+
+    }
+
+    .programs {
+      /* border: 2px solid black; 
+      box-sizing: border-box; */
+      grid-template-columns: repeat(5, 1fr);
+      /* 5 columns */
+      gap: 10px;
+      /* space between buttons */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .programs label {
+      /* display: list-item; */
+      font-weight: bolder;
+      margin-right: 15px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+.footer>h3{
+  font-size: clamp(0.5rem, 1.2vw, 1.25rem);
+}
+
+
+    .link {
+      color: blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      <img src="RGPVlogo.png" alt="RGPV Logo" style="height: 60px;"><br>
+      <h1>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal<br><span style="color: red;">Results</span></h1>
+    </header>
+
+    <div class="section">
+      <h3>Main Result</h3>
+      <fieldset>
+
+        <legend>Please Select Program</legend>
+
+        <div class="programs">
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> B.E.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Tech.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Tech.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> M.C.A.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            Diploma</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Pharmacy(PCI)</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Arch</B></label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Pharmacy</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> M.E.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            B.E.(PTDC)</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Tech.(PT)</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> MAM</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            MCA(DD)</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> Ph.D</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> Pharm
+            D.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Arch.</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" />
+            M.C.A.(2Year)</label>
+          <label><input type="radio" name="main" onclick="window.location.href='StudentInfoPage.html'" /> M.B.A.</label>
+          <label><input type="radio" name="main"
+              onclick="window.location.href='StudentInfoPage.html'" />B.Tech.(PTDC)</label>
+          <label><input type="radio" name="main"
+              onclick="window.location.href='StudentInfoPage.html'" />M.pharm-PCI</label>
+          <label><input type="radio" name="main"
+              onclick="window.location.href='StudentInfoPage.html'" />B.Design</label>
+          <!-- Add all other options as per screenshot -->
+
+
+
+          <!-- Add all other options as per screenshot -->
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="section">
+      <h3>Revaluation Result</h3>
+      <fieldset>
+
+        <legend>Please Select Program</legend>
+        <div class="programs">
+
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            B.E.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Tech.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Tech.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.C.A.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            Diploma</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Pharmacy(PCI)</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Arch</B></label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Pharmacy</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.E.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            B.E.(PTDC)</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Tech.(PT)</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            MAM</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            MCA(DD)</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            Ph.D</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" /> Pharm
+            D.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Arch.</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.C.A.(2Year)</label>
+          <label><input type="radio" name="revaluation" onclick="window.location.href='StudentInfoPage.html'" />
+            M.B.A.</label>
+          <label><input type="radio" name="revaluation"
+              onclick="window.location.href='StudentInfoPage.html'" />B.Tech.(PTDC)</label>
+          <label><input type="radio" name="revaluation"
+              onclick="window.location.href='StudentInfoPage.html'" />M.pharm-PCI</label>
+          <label><input type="radio" name="revaluation"
+              onclick="window.location.href='StudentInfoPage.html'" />B.Design</label>
+          <!-- Add all other options as per screenshot -->
+
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="section">
+      <h3>Challenge Result</h3>
+      <fieldset>
+
+        <legend>Please Select Program</legend>
+        <div class="programs">
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            B.E.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Tech.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Tech.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.C.A.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            Diploma</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Pharmacy(PCI)</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            B.Arch</B></label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Pharmacy</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.E.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            B.E.(PTDC)</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Tech.(PT)</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            MAM</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            MCA(DD)</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            Ph.D</label>
+          <label><input type="radio" name="mainchallenge" onclick="window.location.href='StudentInfoPage.html'" /> Pharm
+            D.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.Arch.</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.C.A.(2Year)</label>
+          <label><input type="radio" name="challenge" onclick="window.location.href='StudentInfoPage.html'" />
+            M.B.A.</label>
+          <label><input type="radio" name="challenge"
+              onclick="window.location.href='StudentInfoPage.html'" />B.Tech.(PTDC)</label>
+          <label><input type="radio" name="challenge"
+              onclick="window.location.href='StudentInfoPage.html'" />M.pharm-PCI</label>
+          <label><input type="radio" name="challenge"
+              onclick="window.location.href='StudentInfoPage.html'" />B.Design</label>
+          <!-- Add all other options as per screenshot -->
+
+        </div>
+      </fieldset>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="footer">
+      <h3 style="color: #993366;padding: 0;margin: 0;"><span class="link">Click here to View Improvement Result</span>
+      </h3>
+      <h3 style="background-color: #3f678e;margin: 0%;padding: 10px;border: 2px;">This portal is managed by Centre for
+        Research and Industrial Staff Performance ( <span class="link">CRISP</span> ), Bhopal. Best viewed in IE 6.0 and
+        above with monitor resolution 1024x768.</h3>
+    </div>
+  </div>
+
+</body>
+
+</html>
