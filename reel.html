@@ -68,7 +68,23 @@ height: 66vh;
   font-size: clamp(0.5rem, 1.2vw, 1.25rem);
   border-radius: 4px;
 }
-
+.savebutton {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .save-btn {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin: 20px 0;
+      height: 2rem;
+    }
     </style>
 </head>
 <body>
@@ -88,6 +104,10 @@ height: 66vh;
       console.error("Playback failed:", err);
     });
     </script>
+    <div class="save-btn">
+     <button class="save-button" onclick="window.location.href='result.html'">Save</button>
+</div>
+
   <!-- <script>
     const video = document.getElementById('myVideo');
     const overlay = document.getElementById('playOverlay');
