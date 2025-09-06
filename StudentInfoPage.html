@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RGPV Results</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -48,9 +48,8 @@
           </div>
 
           <div class="form-group">
-            <label>Grading</label>
-            <input type="radio" name="grading" checked /> Grading
-            <input type="radio" name="grading" /> Non-Grading
+           <span class="radio"><input type="radio" name="grading" checked /> Grading</span>
+           <span class="radio"><input type="radio" name="grading" /> Non-Grading </span>
           </div>
         </div>
 
@@ -62,8 +61,32 @@
           <input type="text" placeholder="" required style="height: 32px;" />
         </div>
         <div class="submitbotton">
-          <button type="submit" onclick="window.location.href='reel.html' ">View Result</button>
+          <button type="submit" onclick="checkEnrollment()">View Result</button>
         </div>
+        <script>
+async function checkEnrollment() {
+  const enroll = document.getElementById("enroll").value;
+
+  const res = await fetch("http://127.0.0.1:5000/save", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ enrollment: enroll }),
+  });
+  const result = await res.json();
+
+  if (result.exists) {
+    // Open saved marksheet
+    localStorage.setItem("marksheet", result.data); // store temporarily
+    window.location.href = "result.html"; // page to display it
+  } else {
+    // Open reel page
+    window.location.href = "reel.html";
+  }
+}
+</script>
+       
       </div>
     </main>
 
