@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 import sqlite3
@@ -69,4 +70,5 @@ def show_marksheet(enrollment):
         return "<h2>No record found</h2>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
