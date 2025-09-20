@@ -241,6 +241,22 @@
       z-index: 1000;
       height: 2rem;
     }
+
+     .d-btn {
+      display: block;
+      margin: 20px auto;
+      background: white;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .d-btn:hover {
+      background: #2980b9;
+    }
   </style>
 </head>
 
@@ -420,7 +436,7 @@
 
     <!-- Final Output -->
     <div id="output" class="container" style="display:none;"></div>
-    <button id="downloadBtn" class="btn" style="display:none;" onclick="downloadPDF()">Download as PDF</button>
+    <button id="downloadBtn" class="d-btn" style="display:none;" onclick="downloadPDF()">Download as PDF</button>
 
     <!-- JS Library -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
