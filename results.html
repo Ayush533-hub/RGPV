@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ecf0f1;
+      margin: 0;
+      padding: 0;
+      /* height: 100vh; */
+    }
+
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: auto;
+    }
+
+    header {
+      background-color: #aed6f1;
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .logo {
+      background-image: url("RGPVlogo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 80px;
+      width: 80px;
+      margin: 0 auto 10px auto;
+      /* overflow: auto; */
+    }
+
+    header h1 {
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    /* border: medium solid black;
+    text-align: center;
+    color: black;
+    display: block;
+    unicode-bidi: isolate;
+    padding-inline: 2px;
+    .section {
+      margin: 20px 0;
+    
+    }
+*/
+    .section h3 {
+      text-align: center;
+      margin-bottom: 0px;
+      color: #993366;
+
+    }
+
+    .items {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+      border: 2px solid black;
+      padding: 1rem;
+      background-color: #dedede;
+      /* border-radius: 7px; */
+    }
+
+    .containers {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .header {
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+      background: #f9e79f;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100% ;
+      border-collapse: collapse;
+      margin-bottom: 8px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #aaa;
+    }
+
+    th,
+    td {
+      /* padding: 8px 12px; */
+      text-align: center;
+    }
+
+    th {
+      background: #dedede;
+    }
+
+    input {
+      /* width: 100%; */
+      border: none;
+      text-align: center;
+      font-size: 14px;
+      padding: 5px;
+    }
+
+    .result-box {
+      display: flex;
+      justify-content: space-between;
+      background: #f8f9f9;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .footer a {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    .btn {
+      display: block;
+      margin: 20px auto;
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #2980b9;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 0.3rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: white;
+      background-color: #3f678e;
+    }
+
+    .login {
+      width: 77.681%;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+      margin-top: 3rem;
+    }
+
+    .reset-btn {
+      border: none;
+      background-color: #dedede;
+      border-radius: 7px;
+      height: 2rem;
+
+    }
+
+    .reset {
+      display: flex;
+      justify-content: center;
+      margin: 8px 0;
+    }
+
+    #output table {
+      width: 100% !important;
+      border-collapse: collapse;
+      table-layout: fixed;
+      /* keeps cells aligned */
+    }
+
+    #output th,
+    #output td {
+      padding: 6px;
+      word-wrap: break-word;
+      /* prevents overflow */
+    }
+
+    html,
+    body {
+      height: auto;
+      overflow: visible !important;
+    }
+
+    #output {
+      page-break-inside: avoid;
+    }
+
+    .Source {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 4px 0;
+      background: #f9f9f9;
+    }
+
+    .disclaimer {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 4px 0;
+      background: #f9f9f9;
+    }
+
+    /* Top-right create button styles */
+    .top-right-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      z-index: 1000;
+      height: 2rem;
+    }
+     @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      table,
+      th,
+      td {
+        font-size: 0.75rem;
+      }
+
+      input,
+      select {
+        font-size: 0.8rem;
+      }
+
+      /* Turn tables scrollable horizontally */
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .reset {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+  .login {
+    width: 100%;   /* full width on tablets & mobiles */
+    margin: 0;     /* optional: remove side margins */
+    border-left: none;
+    border-right: none;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- <button class="top-right-btn btn" onclick="saveMarksheet()">Create</button> -->
+  <div class="container">
+    <header>
+      <img src="RGPVlogo.png" alt="RGPV Logo" style="height: 60px;"><br>
+      <h1>Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal<br><span style="color: red;">Results</span></h1>
+    </header>
+    <div class="login">
+      <h2 style="background-color: #CAE8EA;">Result - B.E. / B.E. (PTDC)/ B.Tech. /B.Design.</h2>
+
+      <table class="info" style="margin: 0;">
+
+        <tr style="height: 4rem;">
+          <th>Enrollment No: <input type="text" style="background-color: #dedede;" id="enroll" value="0205CS231031">
+          </th>
+          <th>Semester:</th>
+          <th> <select id="sem">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+
+              <!-- Add more as needed -->
+            </select></th>
+          <th><input type="radio" name="grading" />Grading</th>
+          <th> <input type="radio" name="grading" /> Non-Grading</th>
+        </tr>
+      </table>
+      <div class="reset">
+        <button class="reset-btn" onclick="window.location.href='www.reel.html';">Reset</button>
+      </div>
+    </div>
+
+
+    <div id="formContainer" class="containers">
+      <div class="header">
+        Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+      </div>
+
+      <table class="info">
+        <tr>
+          <th colspan="4">Statement of Marks<input type="text" style="background-color: #dedede;" id="year"
+              value="-june2024"></th>
+        </tr>
+        <tr>
+          <td><b>Name:</b></td>
+          <td> <input type="text" id="name" value="HIMANSHU VERMA"></td>
+          <td><b>Roll No:</b></td>
+          <td> <input type="text" id="roll" value="0205CS231069"></td>
+        </tr>
+        <tr>
+          <td><b>Course:</b></td>
+          <td> <input type="text" id="course" value="B.Tech"></td>
+          <td><b>Branch:</b></td>
+          <td> <input type="text" id="branch" value="CS"></td>
+        </tr>
+        <tr>
+          <td><b>Semester:</b> </td>
+          <td><input type="text" id="semester2" value="2"></td>
+          <td><b>Status:</b> </td>
+          <td><input type="text" id="status" value="Regular"></td>
+        </tr>
+      </table>
+
+      <table id="subjects">
+        <tr>
+          <th>Subject</th>
+          <th>Total Credit</th>
+          <th>Earned Credit</th>
+          <th>Grade</th>
+        </tr>
+        <tr>
+          <td><input value="BT201 - [T]"></td>
+          <td><input value="3"></td>
+          <td><input value="3"></td>
+          <td><input value="B"></td>
+        </tr>
+        <tr>
+          <td><input value="BT202 - [T]"></td>
+          <td><input value="4"></td>
+          <td><input value="4"></td>
+          <td><input value="B"></td>
+        </tr>
+        <tr>
+          <td><input value="BT203 - [T]"></td>
+          <td><input value="4"></td>
+          <td><input value="4"></td>
+          <td><input value="C+"></td>
+        </tr>
+        <tr>
+          <td><input value="BT204 - [T]"></td>
+          <td><input value="3"></td>
+          <td><input value="3"></td>
+          <td><input value="A"></td>
+        </tr>
+        <tr>
+          <td><input value="BT205 - [T]"></td>
+          <td><input value="3"></td>
+          <td><input value="3"></td>
+          <td><input value="C+"></td>
+        </tr>
+        <tr>
+          <td><input value="BT201 - [P]"></td>
+          <td><input value="1"></td>
+          <td><input value="1"></td>
+          <td><input value="A"></td>
+        </tr>
+        <tr>
+          <td><input value="BT203 - [P]"></td>
+          <td><input value="1"></td>
+          <td><input value="1"></td>
+          <td><input value="A"></td>
+        </tr>
+        <tr>
+          <td><input value="BT204 - [P]"></td>
+          <td><input value="1"></td>
+          <td><input value="1"></td>
+          <td><input value="A"></td>
+        </tr>
+        <tr>
+          <td><input value="BT205 - [P]"></td>
+          <td><input value="1"></td>
+          <td><input value="1"></td>
+          <td><input value="A"></td>
+        </tr>
+        <tr>
+          <td><input value="BT206 - [P]"></td>
+          <td><input value="1"></td>
+          <td><input value="1"></td>
+          <td><input value="A+"></td>
+        </tr>
+      </table>
+
+      <table id="result-box">
+        <tr>
+          <th>Result Des.:</th>
+          <th>SGPA:</th>
+          <th>CGPA:</th>
+        </tr>
+        <tr>
+          <td><input id="result" value="PASS"></td>
+          <td><input id="sgpa" value="7.05"></td>
+          <td><input id="cgpa" value="7.50"></td>
+        </tr>
+
+      </table>
+
+      <table class="info">
+        <tr>
+          <th>Revaluation Date:</th>
+          <th>Revaluation Date with Late Fee:</th>
+          <th> </th>
+        </tr>
+        <tr>
+          <td><input id="reval" value="03/10/2024"></td>
+          <td><input id="revalLate" value="06/10/2024"></td>
+          <td><input id=" " value=" "></td>
+        </tr>
+      </table>
+      <div class="data">
+        <p class="Source">
+          Data Source : Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+        </p>
+        <p class="disclaimer">Disclaimer: The data belongs to RGPV,Bhopal For any communication related to the published
+          data ,please
+          contact examination cell of RGPV or respective college.</p>
+      </div>
+      <button class="btn" type="button" onclick="saveData()">Save</button>
+    </div>
+
+    <!-- Final Output -->
+    <div id="output" class="container" style="display:none;"></div>
+    <button id="downloadBtn" class="btn" style="display:none;" onclick="downloadPDF()">Download as PDF</button>
+
+    <!-- JS Library -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+   <script>
+function saveData() {
+  const container = document.getElementById("formContainer");
+  const output = document.getElementById("output");
+
+  // Get semester from <select>
+  let semester = document.getElementById("sem").value;
+
+  // Get selected grading from radio buttons
+  let gradingInput = document.querySelector('input[name="grading"]:checked');
+  let grading = gradingInput 
+      ? gradingInput.nextSibling.textContent.trim() 
+      : "N/A";
+
+  // Build clean result HTML dynamically
+  let resultHTML = `
+    <h2>Result - B.E. / B.E. (PTDC)/ B.Tech. /B.Design.</h2>
+    <table class="info">
+      <tr>
+        <td><b>Enrollment No:</b> ${document.getElementById("enroll").value}</td>
+        <td><b>Semester:</b> ${semester}</td>
+        <td><b>Grading:</b> ${grading}</td>
+      </tr>
+    </table>
+
+    <div class="header">Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal</div>
+
+    <table class="info">
+      <tr>
+        <td><b>Name:</b> ${document.getElementById("name").value}</td>
+        <td><b>Roll No:</b> ${document.getElementById("roll").value}</td>
+      </tr>
+      <tr>
+        <td><b>Course:</b> ${document.getElementById("course").value}</td>
+        <td><b>Branch:</b> ${document.getElementById("branch").value}</td>
+      </tr>
+      <tr>
+        <td><b>Semester:</b> ${document.getElementById("semester2").value}</td>
+        <td><b>Status:</b> ${document.getElementById("status").value}</td>
+      </tr>
+    </table>
+
+    <table id="subjects">
+      <tr>
+        <th>Subject</th>
+        <th>Total Credit</th>
+        <th>Earned Credit</th>
+        <th>Grade</th>
+      </tr>`;
+
+  // Loop subjects table
+  document.querySelectorAll("#subjects tr").forEach((row, index) => {
+    if (index === 0) return; // skip header
+    let cols = row.querySelectorAll("input");
+    resultHTML += `<tr>
+      <td>${cols[0].value}</td>
+      <td>${cols[1].value}</td>
+      <td>${cols[2].value}</td>
+      <td>${cols[3].value}</td>
+    </tr>`;
+  });
+
+  resultHTML += `</table>
+    <div class="result-box">
+      <div><b>Result Des.:</b> ${document.getElementById("result").value}</div>
+      <div><b>SGPA:</b> ${document.getElementById("sgpa").value}</div>
+      <div><b>CGPA:</b> ${document.getElementById("cgpa").value}</div>
+    </div>
+
+    <table class="info">
+      <tr>
+        <td><b>Revaluation Date:</b> ${document.getElementById("reval").value}</td>
+        <td><b>Revaluation Date with Late Fee:</b> ${document.getElementById("revalLate").value}</td>
+      </tr>
+    </table>
+
+    <p class="Source">
+      Data Source : Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal
+    </p>
+    <p class="disclaimer">
+      Disclaimer: The data belongs to RGPV, Bhopal. For any communication related to the published data, please contact examination cell of RGPV or respective college.
+    </p>`;
+
+  // Render final result
+  output.innerHTML = resultHTML;
+
+  // Hide form and show output
+  container.style.display = "none";
+  output.style.display = "block";
+  document.getElementById("downloadBtn").style.display = "block";
+}
+
+// Download as PDF
+function downloadPDF() {
+  const element = document.getElementById("output");
+  html2canvas(element, { scale: 2 }).then(canvas => {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF("p", "pt", "a4");
+
+    const imgData = canvas.toDataURL("image/png");
+    const imgProps = pdf.getImageProperties(imgData);
+
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+    pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
+    pdf.save("Result_Marksheet.pdf");
+  });
+}
+</script>
+
+    <footer>
+      <p>This portal is managed by Centre for Research and Industrial Staff Performance ( CRISP ), Bhopal. Best viewed
+        in
+        IE 6.0 and above with monitor resolution 1024x768.</p>
+    </footer>
+  </div>
+  </div>
+</body>
+
+</html>
