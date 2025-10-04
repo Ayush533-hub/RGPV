@@ -11,18 +11,17 @@
       background-color: #ecf0f1;
       margin: 0;
       padding: 0;
+      /* height: 100vh; */
     }
 
     .container {
       width: 80%;
-      max-width: 1000px;
       margin: 20px auto;
       background-color: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       height: auto;
-      overflow-x: hidden;
     }
 
     header {
@@ -39,6 +38,7 @@
       height: 80px;
       width: 80px;
       margin: 0 auto 10px auto;
+      /* overflow: auto; */
     }
 
     header h1 {
@@ -85,7 +85,6 @@
       border: 1px solid #ccc;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      overflow-x: auto;
     }
 
     h2 {
@@ -104,7 +103,7 @@
     }
 
     table {
-      width: 100%;
+      width: 100% ;
       border-collapse: collapse;
       margin-bottom: 8px;
     }
@@ -182,7 +181,6 @@
       margin: 0 auto;
       border: 2px solid #ccc;
       margin-top: 3rem;
-      overflow-x: auto;
     }
 
     .reset-btn {
@@ -245,22 +243,56 @@
       z-index: 1000;
       height: 2rem;
     }
+     @media (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
 
-     .d-btn {
-      display: block;
-      margin: 20px auto;
-      background: white;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
+      h2 {
+        font-size: 1rem;
+      }
+
+      table,
+      th,
+      td {
+        font-size: 0.75rem;
+      }
+
+      input,
+      select {
+        font-size: 0.8rem;
+      }
+
+      /* Turn tables scrollable horizontally */
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
     }
 
-    .d-btn:hover {
-      background: #2980b9;
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .reset {
+        flex-direction: column;
+      }
     }
+
+    @media (max-width: 768px) {
+  .login {
+    width: 100%;   /* full width on tablets & mobiles */
+    margin: 0;     /* optional: remove side margins */
+    border-left: none;
+    border-right: none;
+  }
+}
   </style>
 </head>
 
@@ -314,7 +346,7 @@
         </tr>
         <tr>
           <td><b>Name:</b></td>
-          <td> <input type="text" id="name" value="HIMANSHU UIKEY"></td>
+          <td> <input type="text" id="name" value="HIMANSHU VERMA"></td>
           <td><b>Roll No:</b></td>
           <td> <input type="text" id="roll" value="0205CS231069"></td>
         </tr>
@@ -440,7 +472,7 @@
 
     <!-- Final Output -->
     <div id="output" class="container" style="display:none;"></div>
-    <button id="downloadBtn" class="d-btn" style="display:none;" onclick="downloadPDF()">Download as PDF</button>
+    <button id="downloadBtn" class="btn" style="display:none;" onclick="downloadPDF()">Download as PDF</button>
 
     <!-- JS Library -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
